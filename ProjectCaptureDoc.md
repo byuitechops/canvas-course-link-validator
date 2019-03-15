@@ -26,11 +26,11 @@ A report generated that has the number of broken links in each course (for BYU-I
 
 #### Source of Inputs
 
-Getting the inputs directly from canvas (api call to get the list of courses).
+Account Id from stakedholder. (The account id will be used to get the inputs directly from canvas (api call to get the list of courses)).
 
 #### Definition of Inputs
 
-A JSON object with a list of all courses.
+Account ID given to canvas. (Which will be used to get the list of courses from canvas).
 
 ---
 
@@ -51,7 +51,7 @@ Course Code, Course Name (which will be a link to the course validator tool page
 
 #### Type:
 
-CLI with no flags.
+CLI Account ID as optional input. The account number defaults to the account number corresponding to BYU-Idaho Online Master Courses Account (sub account Master Courses).
 
 -----
 
@@ -78,5 +78,5 @@ Nothing outside of normal design process.
 Nothing
 -----
 
-#### *Approved By:* 
-#### *Approval Date:*
+#### *Approved By: Aaron Shiffler*
+#### *Approval Date: 3/15/2019*
