@@ -1,0 +1,15 @@
+{
+  "name": "canvas-link-validator-runner",
+  "version": "1.0.0",
+  "description": "run canvas link validator for a list of courses",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joshua McKinney",
+  "license": "MIT",
+  "dependencies": {
+    "canvas-api-wrapper": "^3.3.5",
+    "json-stringify-pretty-compact": "^2.0.0"
+  }
+}
