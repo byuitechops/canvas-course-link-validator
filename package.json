@@ -1,0 +1,20 @@
+{
+  "name": "canvas-link-validator-runner",
+  "version": "1.0.0",
+  "description": "This project is to automate the canvas link validator",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/byuitechops/canvas-link-validator-runner.git"
+  },
+  "author": "Ryan Gewondjan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/byuitechops/canvas-link-validator-runner/issues"
+  },
+  "homepage": "https://github.com/byuitechops/canvas-link-validator-runner#readme"
+}
