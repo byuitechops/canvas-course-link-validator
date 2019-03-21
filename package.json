@@ -12,7 +12,8 @@
     "url": "git+https://github.com/byuitechops/canvas-link-validator-runner.git"
   },
   "bin": {
-    "check-links": "./bin.js"
+    "check-links-course": "./lib/bin/check-links-course.js",
+    "check-links-account": "./lib/bin/check-links-account.js"
   },
   "author": "Ryan Gewondjan",
   "license": "MIT",
