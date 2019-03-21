@@ -23,6 +23,7 @@
   "homepage": "https://github.com/byuitechops/canvas-link-validator-runner#readme",
   "dependencies": {
     "async": "^2.6.2",
+    "canvas-api-wrapper": "git+https://github.com/byuitechops/canvas-api-wrapper.git",
     "enquirer": "^2.3.0",
     "moment": "^2.24.0"
   }
