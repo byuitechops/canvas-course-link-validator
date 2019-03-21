@@ -19,7 +19,7 @@ function getInput(data, callback) {
  * Output Function
  * If it is complicated, consider abstracting it to a seperate file.
  *************************************************************************/
-function getOutput(data, callback) {
+function formatOutput(data, callback) {
     // How to output data, eg. to csv, to json, to console, etc.
     return callback(null, data);
 }
@@ -29,5 +29,5 @@ function getOutput(data, callback) {
 asyncLib.waterfall([
     getInput,
     main,
-    getOutput,
+    formatOutput,
 ], console.log);
