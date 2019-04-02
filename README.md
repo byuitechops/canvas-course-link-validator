@@ -1,50 +1,39 @@
-# Canvas Link Validator Runner
+# Canvas-Link-Validator-Runner
 
-## Description 
+## Description
+This tool can take a course id or an account id and returns a CSV report with the number of broken links for a single course or an account full of courses.
 
+## Links to Other Docs
 
-## How to Install
+- [Project Capture](./docs/ProjectCaptureDoc.md)
+- [Key Components](./docs/KeyComponentsDoc.md)
 
-Standard Install
+## SetUp / How to Install
 
-1. Clone this repository:
-    ```bash
-    git clone (repository Link).git
-    ```
-1. Step into the folder that was just created 
-    ```bash
-    cd ./Canvas Link Validator Runner
-    ```
-1. To install dependencies, run:
-    ```bash
-    npm i
-    ```
+Install as a global tool.  No additional set up necessary.
 
-1. To initialize the program, run:
-    ```bash
-    npm start
-    ```
-<!--- TODO: Add Additional Installation/Set Up Instructions, then delete this comment  --->
+## Important Notes
+
+None.
 
 ## How to Use
-Run the following command:
-```bash
-node (main)
+
+### API (require as a module)
+
+### Command Line
+
+There are two commands that can be run: ```check-links-account``` and ```check-links-course```
+
+#### check-links-account
+
+```
+check-links-account <subAccountId>
 ```
 
-<!--- TODO: Add Additional Information on How to use the tool/module, then delete this comment  --->
+#### check-links-course
 
-## How to Build
-From within the folder where the project resides, run the following:
-```bash
-npm run build
+```
+check-links-course <courseId>
 ```
 
-## How to Test
-From within the folder where the project resides, run the following:
-```bash
-npm test
-```
-<sub>This document modified: 2019 March 19, 09:43 AM using document generator version: 1.0.0<sub>
 
-<!--- TODO: Review the readme for accuracy, then delete this comment--->

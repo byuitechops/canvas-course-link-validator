@@ -4,7 +4,7 @@
   
 ## Magic Box Chart
 
-![magic box chart](./magicboxes.JPG)
+![magic box chart](./images/magicboxes.JPG)
 
 
 ## Explanation of Design

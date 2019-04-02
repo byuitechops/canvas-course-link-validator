@@ -26,11 +26,20 @@ A report generated that has the number of broken links in each course (for BYU-I
 
 #### Source of Inputs
 
-Account Id from stakedholder. (The account id will be used to get the inputs directly from canvas (api call to get the list of courses)).
+Account Id from stakeholder. (The account id will be used to get the inputs directly from canvas (api call to get the list of courses)).
 
 #### Definition of Inputs
 
 Account ID given to canvas. (Which will be used to get the list of courses from canvas).
+
+When the course ID is given to this canvas api: https://byui.instructure.com/api/v1/courses/:courseId/link_validation
+
+The following object is returned:
+
+![JSON course broken links object](./images/JSON%20Object%20Returned%20with%20Get%20Request.PNG)
+
+Making a post request to https://byui.instructure.com/api/v1/courses/:courseId/link_validation runs the broken link validator for the specific course.
+Making a get request to https://byui.instructure.com/api/v1/courses/:courseId/link_validation gets the information that comes from running the validator.
 
 ---
 
@@ -44,6 +53,14 @@ The tool will be given to Corey Moore to use to generate CSV's at will.
 CSV document with column headers:
 
 Course Code, Course Name (which will be a link to the course validator tool page for that course), number of broken links.
+
+Pre CSV, the output is like this: 
+
+![output object pre csv](./images/outputObjectBeforeCSV.png)
+
+The CSV will look like this:
+
+![CSV](./images/canvasLinkValidatorCSV.PNG)
 
 ---
 
