@@ -20,6 +20,19 @@ None.
 
 ### API (require as a module)
 
+To use the core logic ```require('canvas-link-validator-runner')```
+
+This will return a method that accepts the following parameters: ```courseId, boundaryDate, courseName```
+
+Here is an example:
+
+```
+const linkValidator = require('canvas-link-validator-runner');
+
+//TODO add the rest of how to use this function
+
+```
+
 ### Command Line
 
 There are two commands that can be run: ```check-links-account``` and ```check-links-course```
