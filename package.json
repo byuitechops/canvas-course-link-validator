@@ -1,6 +1,6 @@
 {
   "name": "canvas-link-validator-runner",
-  "version": "3.0.0",
+  "version": "1.0.0",
   "description": "This project is to automate the canvas link validator",
   "main": "./lib/main.js",
   "scripts": {
