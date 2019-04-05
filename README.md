@@ -26,11 +26,19 @@ This will return a method that accepts the following parameters: ```courseId, bo
 
 Here is an example:
 
+Require the validator
 ```
 const linkValidator = require('canvas-link-validator-runner');
+```
 
-//TODO add the rest of how to use this function
+Use the link validator function. The link validator function takes 3 parameters. 
 
+- ```courseId``` - the courseId of the course you will be getting the broken links from. This will be an integer.
+- ```boundaryDate``` - the date which is used to check if we should run the validator again, or if we should just get the results from the last validator. If the date of the boundaryDate is after the date of when the validator was last run for that course (we check the json object, *updated_at* key), then we will run the validator again. This will be a moment.js date.
+- ```courseObject``` - any object that contains keys *courseObject.name* (string) for the course name and *courseObject.course_code* (string) for the course code. This is an optional parameter, but providing it will mean 1 less api call to get this information.
+
+```
+linkValidator(courseId, boundaryDate[, courseObject])
 ```
 
 ### Command Line
