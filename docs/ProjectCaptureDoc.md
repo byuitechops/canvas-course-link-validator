@@ -56,7 +56,7 @@ Course Code, Course Name (which will be a link to the course validator tool page
 
 Pre CSV, the output is like this: 
 
-![output object pre csv](./images/outputObjectBeforeCSV.png)
+![output object pre csv](./images/outputObjectBeforeCSV.PNG)
 
 The CSV will look like this:
 
