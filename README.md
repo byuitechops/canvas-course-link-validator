@@ -51,10 +51,15 @@ There are two commands that can be run: ```check-links-account``` and ```check-l
 check-links-account <subAccountId>
 ```
 
+This command will check all the links in each course in an account. A question is asked to see if the user would like to include all subaccounts to that account or not.
+A second question is asked to know how up to date you would like the report to be. (The last update could be within a week, 2 weeks, a month or you could opt to regenerate the report on the spot by selecting 'Now').
+
 #### check-links-course
 
 ```
 check-links-course <courseId>
 ```
 
+This command will check all the links in only one course.
+A question is asked to know how up to date you would like the report to be. (The last update could be within a week, 2 weeks, a month or you could opt to regenerate the report on the spot by selecting 'Now').
 

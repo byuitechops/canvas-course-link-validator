@@ -22,6 +22,10 @@ Basically the process is as follows:
 
 - d3-csv
 - canvas api wrapper
+- fs
+- enquirer
+- moment
+
 
 ## Things to Consider Before Getting Project Approved
 - Are there any approved libraries that I can use? [Link to Approved Library List]
