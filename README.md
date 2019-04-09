@@ -1,50 +1,65 @@
-# Canvas Link Validator Runner
+# Canvas-Link-Validator-Runner
 
-## Description 
+## Description
+This tool can take a course id or an account id and returns a CSV report with the number of broken links for a single course or an account full of courses.
 
+## Links to Other Docs
 
-## How to Install
+- [Project Capture](./docs/ProjectCaptureDoc.md)
+- [Key Components](./docs/KeyComponentsDoc.md)
 
-Standard Install
+## SetUp / How to Install
 
-1. Clone this repository:
-    ```bash
-    git clone (repository Link).git
-    ```
-1. Step into the folder that was just created 
-    ```bash
-    cd ./Canvas Link Validator Runner
-    ```
-1. To install dependencies, run:
-    ```bash
-    npm i
-    ```
+Install as a global tool.  No additional set up necessary.
 
-1. To initialize the program, run:
-    ```bash
-    npm start
-    ```
-<!--- TODO: Add Additional Installation/Set Up Instructions, then delete this comment  --->
+## Important Notes
+
+None.
 
 ## How to Use
-Run the following command:
-```bash
-node (main)
+
+### API (require as a module)
+
+To use the core logic ```require('canvas-link-validator-runner')```
+
+This will return a method that accepts the following parameters: ```courseId, boundaryDate, courseName```
+
+Here is an example:
+
+Require the validator
+```
+const linkValidator = require('canvas-link-validator-runner');
 ```
 
-<!--- TODO: Add Additional Information on How to use the tool/module, then delete this comment  --->
+Use the link validator function. The link validator function takes 3 parameters. 
 
-## How to Build
-From within the folder where the project resides, run the following:
-```bash
-npm run build
+- ```courseId``` - the courseId of the course you will be getting the broken links from. This will be an integer.
+- ```boundaryDate``` - the date which is used to check if we should run the validator again, or if we should just get the results from the last validator. If the date of the boundaryDate is after the date of when the validator was last run for that course (we check the json object, *updated_at* key), then we will run the validator again. This will be a moment.js date.
+- ```courseObject``` - any object that contains keys *courseObject.name* (string) for the course name and *courseObject.course_code* (string) for the course code. This is an optional parameter, but providing it will mean 1 less api call to get this information.
+
+```
+linkValidator(courseId, boundaryDate[, courseObject])
 ```
 
-## How to Test
-From within the folder where the project resides, run the following:
-```bash
-npm test
-```
-<sub>This document modified: 2019 March 19, 09:43 AM using document generator version: 1.0.0<sub>
+### Command Line
 
-<!--- TODO: Review the readme for accuracy, then delete this comment--->
+There are two commands that can be run: ```check-links-account``` and ```check-links-course```
+
+#### check-links-account
+
+```
+check-links-account <subAccountId>
+```
+
+This command will check all the links in each course in an account. A question is asked to see if the user would like to include all subaccounts to that account or not.
+A second question is asked to know how up to date you would like the report to be. (The last update could be within a week, 2 weeks, a month or you could opt to regenerate the report on the spot by selecting 'Now').
+
+#### check-links-course
+
+```
+check-links-course <courseId>
+```
+
+This command will check all the links in only one course.
+A question is asked to know how up to date you would like the report to be. (The last update could be within a week, 2 weeks, a month or you could opt to regenerate the report on the spot by selecting 'Now').
+

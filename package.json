@@ -2,9 +2,9 @@
   "name": "canvas-link-validator-runner",
   "version": "1.0.0",
   "description": "This project is to automate the canvas link validator",
-  "main": "main.js",
+  "main": "./lib/main.js",
   "scripts": {
-    "start": "node bin.js",
+    "start": "node ./lib/bin/check-links-course.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -12,7 +12,8 @@
     "url": "git+https://github.com/byuitechops/canvas-link-validator-runner.git"
   },
   "bin": {
-    "check-links": "./bin.js"
+    "check-links-course": "./lib/bin/check-links-course.js",
+    "check-links-account": "./lib/bin/check-links-account.js"
   },
   "author": "Ryan Gewondjan",
   "license": "MIT",
@@ -22,6 +23,8 @@
   "homepage": "https://github.com/byuitechops/canvas-link-validator-runner#readme",
   "dependencies": {
     "async": "^2.6.2",
+    "canvas-api-wrapper": "git+https://github.com/byuitechops/canvas-api-wrapper.git",
+    "d3-dsv": "^1.1.1",
     "enquirer": "^2.3.0",
     "moment": "^2.24.0"
   }
